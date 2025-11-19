@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us - Fruitful Fields</title>
+    <link rel="stylesheet" href="CS/styles.css">
 </head>
 <body>
     <header>
@@ -19,18 +20,42 @@
     </header>
 
     <main>
-        <h1>About Fruitful Fields</h1>
-        <p>Fruitful Fields has been distributing farm-grown fruits since 2006. Our mission is to provide fresh, organic nutrition to everyone—from businesses to everyday customers.</p>
-        <p>We aim to modernize the way customers interact with us by providing a convenient online ordering experience.</p>
+        <h1 class="fade-in-up">About Fruitful Fields</h1>
+        <p class="fade-in-up" style="animation-delay: 0.2s;">Fruitful Fields began in 2006 with a simple goal: connect communities to clean, honest nutrition. What started as a small farm-to-family initiative has grown into a trusted distributor serving homes and businesses across Limpopo and beyond.</p>
+        <p class="fade-in-up" style="animation-delay: 0.3s;">Our mission is to modernize the way people access fresh produce—blending traditional farming values with digital convenience. From the soil to your screen, we’re committed to quality, sustainability, and service.</p>
 
-        <img src="images/farm2.jpg" width="600">
+        <img src="images/farm2.jpg" width="600" class="scale-in" style="animation-delay: 0.4s;">
+        <button id="openModal" class="info-btn fade-in-up" style="animation-delay: 0.5s;">Learn More About Our Farms</button>
     </main>
-
 
 
 
     <footer>
         <p>&copy; 2025 Fruitful Fields. All rights reserved.</p>
     </footer>
+    <!-- Modal Structure -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <h2>Our Farming & Sourcing Standards</h2>
+        <p>
+            At Fruitful Fields, we partner with trusted local farms across Limpopo and neighboring provinces.
+            Our growers follow sustainable, eco-friendly farming methods that protect soil health, conserve
+            water, and support biodiversity.
+        </p>
+        <p>
+            All produce undergoes strict quality checks from harvest to packaging, ensuring you receive fresh,
+            nutrient-rich fruits every time. From farm to doorstep, we maintain a cold chain process to preserve
+            taste, texture, and freshness.
+        </p>
+        <p>
+            Our mission is simple: deliver clean, honest nutrition—grown with care, delivered with pride.
+        </p>
+    </div>
+</div>
+
+<script src="JS/script.js"></script>
+
 </body>
+
 </html>

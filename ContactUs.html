@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Track Order - Fruitful Fields</title>
+    <title>Contact Us - Fruitful Fields</title>
+    <link rel="stylesheet" href="CS/styles.css">
+    <!-- Add this line for Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header>
@@ -19,31 +22,37 @@
     </header>
 
     <main>
-        <h1>Contacts</h1>
-        <p></p>
-
+        <h1 class="fade-in-up">Contact Us</h1>
         
-
-          <form method = "post" >
-            <label for ="name">Full Name:</label>
-            <input type="text " id="name" required><BR></BR>
-  
-  
-            <label for ="Email">Email:</label>
-            <input type="email" id="email" required><BR></BR>
-  
-  
-            <label for ="number">Phone number:</label>
-            <input type="number" id="phonenumber" required><BR></BR>
-  
-            <label for ="message">Message:</label>
-            <input type="textarea" id="message" required><BR></BR>
+        <form method="post" class="scale-in">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required><br><br>
             
-         <button type="submit">Submit</button>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+            
+            <label for="phonenumber">Phone number:</label>
+            <input type="number" id="phonenumber" required><br><br>
+            
+            <label for="message">Message:</label>
+            <input type="textarea" id="message" required><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Add this map section AFTER your form -->
+        <div style="margin-top: 40px;" class="fade-in-up" style="animation-delay: 0.3s;">
+            <h2>Find Us</h2>
+            <div id="map" style="height: 400px; width: 100%; border: 2px solid #4caf50; border-radius: 8px;"></div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Fruitful Fields. All rights reserved.</p>
     </footer>
+
+    <!-- Add these scripts at the bottom -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

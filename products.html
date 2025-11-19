@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Products - Fruitful Fields</title>
+    <link rel="stylesheet" href="CS/styles.css">
 </head>
 <body>
     <header>
@@ -21,35 +22,63 @@
     <main>
         <h1>Our Products</h1>
 
-        <h2>Strawberries</h2>
-        <img src="images/G03.jpg" alt="Strawberries" width="200">
-        <p>Sweet, fresh strawberries. R50/kg</p>
-        <button> Place Order</button>
+        <!-- Search and Filter Section -->
+        <div class="products-controls">
+            <input type="text" id="searchInput" placeholder="Search products..." class="search-bar">
+            <select id="sortSelect" class="sort-select">
+                <option value="name">Sort by Name</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+            <button id="filterBtn" class="filter-btn">Filter</button>
+        </div>
 
-        <h2>Apples</h2>
-        <img src="images/aplles.jpg" alt="Apples" width="200">
-        <p>Organic Apples. R30/kg</p>
-        <button> Place Order</button>
+        <!-- Products will be dynamically loaded here -->
+        <div id="productsContainer" class="products-grid">
+            <!-- JavaScript will populate this -->
+        </div>
 
-        <h2>Mangoes</h2>
-        <img src="images/mangoes2.jpg" alt="Mangoes" width="200">
-        <p>Juicy mangoes. R45/kg</p>
-        <button> Place Order</button>
+        <!-- Shopping Cart Sidebar -->
+        <div id="cartSidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button id="closeCart">&times;</button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Total: R<span id="cartTotal">0</span></div>
+                <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+            </div>
+        </div>
 
-        <h2>Litchis</h2>
-        <img src="images/lychee-fruit-close-up.jpg" alt="Litches" width="200">
-        <p>Juicy Litches. R45/kg</p>
-        <button> Place Order</button>
-
-        <h2>Oranges</h2>
-        <img src="images/oranges.jpg" alt="Oranges" width="200">
-        <p>Juicy Oranges. R45/kg</p>
-
-       <button> Place Order</button>
+        <!-- Cart Toggle Button -->
+        <button id="cartToggle" class="cart-toggle">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </button>
     </main>
 
     <footer>
         <p>&copy; 2025 Fruitful Fields. All rights reserved.</p>
     </footer>
+
+    <script src="JS/script.js"></script>
+        <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-price"></p>
+            </div>
+        </div>
+        <button class="lightbox-nav lightbox-prev">&#10094;</button>
+        <button class="lightbox-nav lightbox-next">&#10095;</button>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
 </body>
 </html>
